@@ -32,13 +32,9 @@ var commands = {
 	}
 };
 
-var ssl = {
-	key: fs.readFileSync('/etc/apache2/https/home.hotblocks.nl.key'),
-	cert: fs.readFileSync('/etc/apache2/https/home.hotblocks.nl-bundle.crt'),
-};
 var options = {
 	port: 8086,
-	ssl : ssl,
+	ssl : require('./ssl-conf'),
 	commands: commands,
 };
 var rws = rwebsocket(options);
