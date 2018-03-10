@@ -1,4 +1,3 @@
-var fs = require('fs');
 var rwebsocket = require('./rwebsocket.js');
 
 function _log(msg) {
